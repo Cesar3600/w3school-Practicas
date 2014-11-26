@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+	<div ng-app="myApp" ng-controller='control1'>
+		Nombre: <input type="text" ng-model='nombre'><br>
+		Apellidos: <input type="text" ng-model='apellido'>
+		<p>nombre completo: <span>{{nombre+"   "+apellido}}</span></p>
+
+	</div>
+
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src='04AngularBasic_controladores.js'></script>
+</body>
+</html>

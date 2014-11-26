@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="xxx">
+
+<head>
+</head>
+
+<body >
+	<div ng-controller="control1">
+		<input type="number" ng-model="sum1" name="sum1" placeholder="ingrese numero1 aqui">
+
+		<select ng-model="oper" selected>
+			<option value="{{operador.op}}"ng-repeat="operador in operadores" >{{operador.value}}</option>
+		</select>
+		<input type="number" ng-model="sum2" name="sum2" placeholder="ingrese numero2 aqui">
+		<button ng-click="procesar()">Procesar</button>
+		<span>{{resultado}}</span>
+	</div>
+
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script>
+	var xxx=angular.module('xxx',[]);
+	xxx.controller('control1',function($scope){
+		$scope.operadores=[{op:'suma',value:'+'},{op:'resta',value:'-'},{op:'multiplicacion',value:'x'},{op:'division',value:'/'}];
+
+		$scope.procesar=function(){
+			var a = $scope.sum1;
+			var b = $scope.sum2;
+
+			var operacion1=$scope.oper;
+
+			/*console.log('Estoy probando ' + operacion1);*/
+			switch(operacion1){
+				case 'suma':
+					$scope.resultado=a+b;
+					console.log('Estoy sumando');
+					break;
+
+				case 'resta':
+					$scope.resultado=a-b;
+					console.log('Estoy  restando');
+					break;
+
+				case 'multiplicacion':
+					$scope.resultado=a*b;
+					console.log('Estoy multiplicando');
+					break;
+
+				case 'division':
+					$scope.resultado=a/b;
+					console.log('Estoy dividiendo');
+					break;
+			}
+
+
+		};
+
+		$scope.limpiar=function(){
+			$scope.sum1='';
+			$scope.sum2='';
+
+		};
+
+
+	});
+	</script>
+
+</body>
+
+</html>
