@@ -1,5 +1,5 @@
 var myApp=angular.module('myApp',[]);
-myApp.factory('fabrica')
+/*myApp.factory('fabrica')*/
 
 myApp.controller('control',function($scope){
 	var acumulador='';
@@ -8,7 +8,8 @@ myApp.controller('control',function($scope){
 		$scope.preResultado=acumulador;
 	};
 	$scope.reset=function(){
-		$scope.preResultado='borrar';
+		$scope.preResultado='';
+		acumulador='';
 
 	};
 
