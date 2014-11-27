@@ -12,27 +12,27 @@
 <div class="carcasa" ng-controller="control">
 	<div class="visor">
 		<small>{{preResultado}}</small>
-		<h4>123 +123</h4>
+		<h4>{{prueba}}</h4>
 	</div>
 	<div class="botones1">
 		<button class="btn btn-default"ng-click="valBtn(1)">1</button>
 		<button class="btn btn-default"ng-click="valBtn(2)">2</button>
 		<button class="btn btn-default"ng-click="valBtn(3)">3</button>
-		<button class="btn btn-default">4</button>
-		<button class="btn btn-default">5</button>
-		<button class="btn btn-default">6</button>
-		<button class="btn btn-default">7</button>
-		<button class="btn btn-default">8</button>
-		<button class="btn btn-default">9</button>
-		<button class="btn btn-default">.</button>
-		<button class="btn btn-default">0</button>
-		<button class="btn btn-default"ng-click="reset()">R</button>
+		<button class="btn btn-default"ng-click="valBtn(4)">4</button>
+		<button class="btn btn-default"ng-click="valBtn(5)">5</button>
+		<button class="btn btn-default"ng-click="valBtn(6)">6</button>
+		<button class="btn btn-default"ng-click="valBtn(7)">7</button>
+		<button class="btn btn-default"ng-click="valBtn(8)">8</button>
+		<button class="btn btn-default"ng-click="valBtn(9)">9</button>
+		<button class="btn btn-default"ng-click="valBtn('.')">.</button>
+		<button class="btn btn-default"ng-click="valBtn(0)">0</button>
+		<button class="btn btn-default"ng-click="barrido()">B</button>
 	</div>
 	<div class="botones2">
 		<button class="btn btn-default"ng-click="valBtn('+')">+</button>
-		<button class="btn btn-default">-</button>
-		<button class="btn btn-default">*</button>
-		<button class="btn btn-default">/</button>
+		<button class="btn btn-default"ng-click="valBtn('-')">-</button>
+		<button class="btn btn-default"ng-click="valBtn('*')">x</button>
+		<button class="btn btn-default"ng-click="valBtn('/')">/</button>
 	</div>
 	<div class="botones3">
 		<button class="btn btn-default"ng-click="procesar()">=</button>
